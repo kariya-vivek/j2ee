@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body style="align-items:center;justify-content:center;display:flex;height:100vh;">
+        <div style="background-color:yellow;color:red;flex-direction: column;">
+         <form action="practical25" method="post">
+             Roll no:<input type="text" placeholder="enter roll no" name="rno"><br><br>
+             name:<input type="text" placeholder="enter name" name="rnm"><br>
+             <br>
+             course
+             <select name="course" >
+                <option value="BCA">bca</option>
+                <option value="BCOM">bcom</option>
+                <option value="BSC">bsc</option>
+                <option value="BA">ba</option>
+                <option value="BBA">bba</option>
+             </select><br><br>
+            semester<input type="text" placeholder="enter your semster" name="semno"><br>
+            <br>hobbies<br><input type="checkbox"  name="hobbies[]" value="cricket">cricket<br>
+            <input type="checkbox"  name="hobbies[]" value="reading">reading<br>
+            <input type="checkbox"  name="hobbies[]" value="writing">writing<br>
+            <br><center><input type="submit" style="color:white;background-color:blue;"></center>
+        </form>
+        </div>    
+        
+    </body>
+</html>
