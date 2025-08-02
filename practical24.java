@@ -28,22 +28,7 @@ public class practical24 extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet practical24</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1> Employee Number is:  " + request.getParameter("empno")+ "</h1>");
-            out.println("<h1> Employee Name is:  " + request.getParameter("empnm")+ "</h1>");
-            out.println("<h1> Employee Designation is:  " + request.getParameter("empdes")+ "</h1>");
-             out.println("<h1> Employee Qualifications  is:  " + request.getParameter("empquali")+ "</h1>");
-            out.println("</body>");
-            out.println("</html>");
-        }
+       
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -58,7 +43,15 @@ public class practical24 extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+         response.setContentType("text/html;charset=UTF-8");
+        try (PrintWriter out = response.getWriter()) {
+            /* TODO output your page here. You may use following sample code. */
+            out.println("<h1> Employee Number is:  " + request.getParameter("empno")+ "</h1>");
+            out.println("<h1> Employee Name is:  " + request.getParameter("empnm")+ "</h1>");
+            out.println("<h1> Employee Designation is:  " + request.getParameter("empdes")+ "</h1>");
+             out.println("<h1> Employee Qualifications  is:  " + request.getParameter("empquali")+ "</h1>");
+        }
+        //processRequest(request, response);
     }
 
     /**
