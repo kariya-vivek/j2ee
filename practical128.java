@@ -13,7 +13,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
+import javax.servlet.RequestDispatcher;
 /**
  *
  * @author KSC6
@@ -38,11 +38,15 @@ public class practical128 extends HttpServlet {
             String pwd=request.getParameter("txt_pwd");
             if(unm.equals("admin") && pwd.equals("admin"))
             {
-                out.println("welcome "+unm);
+                 RequestDispatcher rd=request.getRequestDispatcher("practical28sev2");
+                 rd.include(request, response);
             }
             else
             {
                 out.println("pleas enter valid username and password");
+                RequestDispatcher obj=request.getRequestDispatcher("index.html");
+                obj.include(request, response);
+                
             }
         }
     }
